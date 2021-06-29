@@ -1,7 +1,6 @@
 from threading import Thread
 from subprocess import *
 from time import sleep
-from keyboard import *
 from gtts import gTTS
 from playsound import playsound
 from os import *
