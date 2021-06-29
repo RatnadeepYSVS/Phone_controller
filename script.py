@@ -4,7 +4,7 @@ from time import sleep
 from gtts import gTTS
 from playsound import playsound
 from os import *
-#If U are on windows run the script in git bash 
+#In windows run the script in git bash 
 def speak(text):
     gTTS(text=text,lang='en').save('speak.mp3')
     playsound('speak.mp3')
@@ -19,8 +19,8 @@ def caller():
         if filt_data!='':
             speak(f'Incoming call from {filt_data[3:]}')
             sleep(2)
-incoming_call_thread=Thread(target=caller)
-incoming_call_thread.start()
+incoming_call_thread=Thread(target=caller)#Declaring the thread
+incoming_call_thread.start()#Starting the thread
 while True:
     print('Options:-\n1 to call someone\n2.backup ur images to laptop\n3.lock ur phone')
     k=int(input('enter option '))
