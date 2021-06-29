@@ -19,6 +19,7 @@
   2 Then go to Software Information    
   3 Then U will see an option called build number and tap it 7 times  
   Then it will ask u your phone passcode enter it    
+  Then you will see developer options right below about phone  
   ### Connecting ur phone with laptop via ADB
   After going to the developer options turn usb debugging on(we will be using usb only once to setup) in your mobile    
   connect ur phone with usb to laptop and open cmd prompt    
