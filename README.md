@@ -46,7 +46,7 @@
    and navigate to it by `cd Phone_controller`  
    before running the python script run setup.bat file to pip install required modules      
    then run cmd `python script.py`  
-# Feedback
+# Updates & Feedback
    More features will be added in upcoming days  
    Improvements and PR's Accepted (: 
    
