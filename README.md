@@ -1,7 +1,10 @@
 # Phone_controller
   This script allows you to control your phone from your laptop.  
-  You can make calls, backup your photos and lock your phone from your laptop.   
-  This bot also gives you voice alert for incoming calls.  
+  You can make calls, backup your photos and lock your phone from your laptop. 
+  You can also recieve calllogs.  
+  You can see all incoming calls.But outgoing calls are only seen when a call is made from ur laptop.  
+  You can also see missed calls.      
+  This script also gives you voice alert for incoming calls.  
 # Requirements
   ## IMP:- This Script Only works on android devices   
   #### For Laptop    
