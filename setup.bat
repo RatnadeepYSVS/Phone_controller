@@ -1,1 +1,1 @@
-pip install gtts playsound
+pip install gtts playsound prettytable
