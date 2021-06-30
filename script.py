@@ -24,7 +24,6 @@ def caller():
         phone_call=phone.split('=')[-1]
         accepted=False
         call_state=data[0].split('=')[-1]
-        call_incoming=False
         if phone_call:
             speak(f'Incoming call from {phone_call[3:]}')
             incoming_call=phone_call
