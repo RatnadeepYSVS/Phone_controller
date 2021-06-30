@@ -54,7 +54,6 @@ while True:
         call_log.add('+91'+phone_num+f' OUT {datetime.now().hour}:{str(datetime.now().minute).zfill(2)}')
         Popen(cmd,stdin=PIPE,stdout=PIPE,shell=True)
     elif k==2:
-        print('backing up photos -----')
         fol_path=input('enter folder path')
         cmd=f'adb pull /sdcard/DCIM/Camera {fol_path}'
         Popen(cmd,shell=True,stdin=PIPE,stdout=PIPE)
