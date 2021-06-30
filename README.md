@@ -1,6 +1,6 @@
 # Phone_controller
   This script allows you to control your phone from your laptop.  
-  You can make calls, backup your photos and lock your phone from your laptop.   
+  You can make calls, backup your photos and lock your phone from your laptop.      
   You can also recieve calllogs.  
   You can see all incoming calls.But outgoing calls are only seen when a call is made from ur laptop.  
   You can also see missed calls.      
