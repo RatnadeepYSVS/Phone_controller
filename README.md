@@ -48,6 +48,7 @@
    then run cmd `python script.py`  
 # Updates & Feedback
    More features will be added in upcoming days  
+   If a new feature is added it will be updated in the phone controller section above    
    Improvements and PR's Accepted (: 
    
   
