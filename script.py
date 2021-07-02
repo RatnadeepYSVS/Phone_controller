@@ -23,14 +23,14 @@ def caller():
         phone_call=phone.split('=')[-1]
         call_state=data[0].split('=')[-1]
         if phone_call:
-            call_string=phone_call+f' IN {datetime.now().hour}:{str(datetime.now().minute).zfill(2)}  '
+            call_string=phone_call+f' IN {str(datetime.now().hour).zfill(2)}:{str(datetime.now().minute).zfill(2)}'
             speak(f'Incoming call from {phone_call[3:]}')
         if int(call_state)==2:
             if call_string:
                 k=call_string.split()
-                if len(k)==3:
-                    k.append('RETRIEVED')
-                call_string=" ".join(k)
+                if call_string in call_log and len(k)==3:
+                    call_log.discard(call_string)
+                    call_string+=" RETRIEVED"
         if call_string:
             call_log.add(call_string)
         sleep(1)
@@ -43,8 +43,7 @@ while True:
     if k==1:
         phone_num=input('enter mobile number with country code ')
         cmd=f'adb shell am start -a android.intent.action.CALL -d tel:{phone_num}'
-        call_log.add(phone_num+f' OUT {datetime.now().hour}:{str(datetime.now().minute).zfill(2)}'+' CALLED')
-        print(call_log)
+        call_log.add(phone_num+f' OUT {str(datetime.now().hour).zfill(2)}:{str(datetime.now().minute).zfill(2)}'+' CALLED')
         Popen(cmd,stdin=PIPE,stdout=PIPE,shell=True)
     elif k==2:
         fol_path=input('enter folder path')
