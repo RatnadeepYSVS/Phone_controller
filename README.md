@@ -45,7 +45,7 @@
    ### For Initial Setup
    clone the repo by `git clone https://github.com/RatnadeepYSVS/Phone_controller.git`   
    and navigate to it by `cd Phone_controller`  
-   before running the python script run setup.bat file to pip install required modules  
+   before running the python script run **setup.bat** file to pip install required modules  
    then run cmd `python script.py`
    ### General Usage
    open git bash and run cmd `cd Phone_controller`  
