@@ -47,8 +47,9 @@
    before running the python script run setup.bat file to pip install required modules      
    then run cmd `python script.py`  
 # Updates & Feedback
-   More features will be added in upcoming days  
+   More features will be added in upcoming days   
    If a new feature is added it will be updated in the phone controller section above    
+   If a new update comes run cmd `git pull` to get updated   
    Improvements and PR's Accepted (: 
    
   
