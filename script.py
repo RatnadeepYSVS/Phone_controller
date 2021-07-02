@@ -11,6 +11,7 @@ missed_call_list=set()
 incoming_call=''
 call_log=set()
 def speak(text):
+    global incoming_call
     gTTS(text=text,lang='en').save('speak.mp3')
     playsound('speak.mp3')
     remove('speak.mp3')
@@ -32,8 +33,10 @@ def caller():
             missed_call_list.add(phone_call)
         if int(call_state)==2:
             accepted=True
-            if incoming_call in missed_call_list:
+            try:
                 missed_call_list.discard(incoming_call)
+            except:
+                pass
             else:
                 if incoming_call:
                     call_log.add(incoming_call+f' IN {datetime.now().hour}:{str(datetime.now().minute).zfill(2)}')
@@ -46,11 +49,11 @@ while True:
     print('Options:-\n1 to call someone\n2.backup ur images to laptop\n3.get missed call log\n4.get call log\n5.lock ur phone')
     k=int(input('enter option '))
     if k==1:
-        phone_num=input('enter mobile number ')
-        cmd=f'adb shell am start -a android.intent.action.CALL -d tel:+91{phone_num}'
+        phone_num=input('enter mobile number with country code ')
+        cmd=f'adb shell am start -a android.intent.action.CALL -d tel:{phone_num}'
         if phone_num in missed_call_list:
             missed_call_list.discard(phone_num)
-        call_log.add('+91'+phone_num+f' OUT {datetime.now().hour}:{str(datetime.now().minute).zfill(2)}')
+        call_log.add(phone_num+f' OUT {datetime.now().hour}:{str(datetime.now().minute).zfill(2)}')
         Popen(cmd,stdin=PIPE,stdout=PIPE,shell=True)
     elif k==2:
         fol_path=input('enter folder path')
@@ -67,9 +70,10 @@ while True:
         print('Your call log from this laptop')
         if len(call_log):
             call_log_table=PrettyTable(["Phone Number","Stats","Time"])
-            call_log_list=list(call_log)
-            for i in call_log_list:
-                call_log_table.add_row(i.split())
+            mapper=list(map(lambda x:x.split(),call_log))
+            mapper.sort(key=lambda x:x[2],reverse=True)
+            for i in mapper:
+                call_log_table.add_row(i)
             print(call_log_table)
     elif k==5:
         cmd='adb shell input keyevent 26'
