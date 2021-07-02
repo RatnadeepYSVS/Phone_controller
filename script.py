@@ -38,7 +38,7 @@ def caller():
 incoming_call_thread=Thread(target=caller)#Declaring the thread
 incoming_call_thread.start()#Starting the thread
 while True:
-    print('Options:-\n1 to call someone\n2.backup ur images to laptop\n3.get call log\n5.lock ur phone')
+    print('Options:-\n1 to call someone\n2.backup ur images to laptop\n3.get call log\n4.lock ur phone')
     k=int(input('enter option '))
     if k==1:
         phone_num=input('enter mobile number with country code ')
