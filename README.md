@@ -42,15 +42,15 @@
    u can also play with the adb environment  
    make sure to checkout the docs for more info.
  # Working 
-   # # For Initial Setup
+   ### For Initial Setup
    clone the repo by `git clone https://github.com/RatnadeepYSVS/Phone_controller.git`   
    and navigate to it by `cd Phone_controller`  
    before running the python script run setup.bat file to pip install required modules  
    then run cmd `python script.py` then follow *General usage*
-   ## General Usage
+   ### General Usage
    open git bash and run cmd `cd Phone_controller`  
    then run cmd `python script.py`
-   ## Updates
+   ### Updates
    More features will be added in upcoming days   
    If a new feature is added it will be updated in the phone controller section above    
    If a new update comes run cmd `git pull` to get updated 
