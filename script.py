@@ -35,11 +35,9 @@ def caller():
             accepted=True
             try:
                 missed_call_list.discard(incoming_call)
-            except:
+                incoming_call=''
+            except UnboundLocalError:
                 pass
-            else:
-                if incoming_call:
-                    incoming_call=''
         sleep(1)
 
 incoming_call_thread=Thread(target=caller)#Declaring the thread
