@@ -11,7 +11,6 @@ missed_call_list=set()
 incoming_call=''
 call_log=set()
 def speak(text):
-    global incoming_call
     gTTS(text=text,lang='en').save('speak.mp3')
     playsound('speak.mp3')
     remove('speak.mp3')
