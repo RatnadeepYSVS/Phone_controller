@@ -53,8 +53,7 @@
    More features will be added in upcoming days   
    If a new feature is added it will be updated in the phone controller section above    
    If a new update comes run cmd `git pull` to get updated 
-# Final Announcements  
-   Improvements and PR's Accepted (: 
+## Improvements and PR's Accepted (: 
    
   
 
